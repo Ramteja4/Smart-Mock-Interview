@@ -1,0 +1,343 @@
+/* InterviewInProgress.css */
+.interview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.interview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.interview-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.timer {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  background-color: #1e40af;
+  color: white;
+  border-radius: 8px;
+}
+
+.interview-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Chat History Styles */
+.chat-history-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.chat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100%;
+}
+
+.question-bubble {
+  background-color: #e9f2ff;
+  border-radius: 12px;
+  padding: 16px;
+  align-self: flex-start;
+  max-width: 85%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.past-question .question-bubble {
+  background-color: #eff6ff;
+}
+
+.current-question .question-bubble {
+  background-color: #dbeafe;
+  border-left: 4px solid #3b82f6;
+}
+
+.question-number {
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.question-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #1f2937;
+}
+
+.answer-bubble {
+  align-self: flex-end;
+  max-width: 90%;
+}
+
+.past-answer {
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  padding: 16px;
+  color: #4b5563;
+  line-height: 1.6;
+  border-right: 4px solid #9ca3af;
+  white-space: pre-wrap;
+}
+
+.answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.answer-input {
+  width: 100%;
+  min-height: 150px;
+  padding: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.answer-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.answer-controls button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.thinking {
+  background-color: white;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+}
+
+.thinking.active {
+  background-color: #dbeafe;
+}
+
+.next-question {
+  background-color: #1e40af;
+  color: white;
+  border: none;
+}
+
+.next-question:hover {
+  background-color: #1e3a8a;
+}
+
+.next-question:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.loading {
+  padding: 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.webcam-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.webcam-section video {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.camera-error {
+  padding: 10px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.metrics {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.metric label {
+  font-weight: 500;
+  width: 100px;
+}
+
+.progress-bar {
+  height: 12px;
+  flex-grow: 1;
+  background-color: #e5e7eb;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #3b82f6;
+  transition: width 0.3s ease;
+}
+
+.expression {
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.error-message {
+  padding: 15px;
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Add styles for no-face state */
+.no-face-detected {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #b91c1c;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.no-face-detected svg {
+  margin-right: 6px;
+}
+
+.progress-bar.no-face {
+  background-color: #f3f4f6;
+  border: 1px dashed #d1d5db;
+}
+
+.expression.no-face {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .interview-container {
+    padding: 15px;
+  }
+
+  .interview-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .timer {
+    align-self: flex-end;
+  }
+
+  .question-bubble,
+  .past-answer {
+    max-width: 95%;
+  }
+
+  .answer-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .webcam-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .interview-container {
+    padding: 10px;
+  }
+
+  .chat-history-section {
+    gap: 16px;
+  }
+
+  .question-text {
+    font-size: 1.1rem;
+  }
+
+  .answer-input {
+    min-height: 120px;
+    padding: 10px;
+  }
+
+  .answer-controls button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .webcam-section video,
+  .webcam-section canvas {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .metric {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .metric label {
+    width: auto;
+    margin-bottom: 5px;
+  }
+}
