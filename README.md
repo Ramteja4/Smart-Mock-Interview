@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Interview Practice Platform
 
 A full-stack web application that allows students to practice interviews using AI. The platform simulates real interview conditions by integrating video, voice, and AI analysis to provide a comprehensive evaluation of the student's performance.
@@ -104,3 +105,7 @@ The current implementation uses mock AI services for demonstration purposes. In 
 ## License
 
 MIT
+=======
+# Smart-Mock-Interview
+Smart Mock Interview is an AI-powered platform that helps users improve interview skills through realistic simulations. It uses video, voice, facial analysis, speech-to-text, and NLP feedback. Built with React.js, it offers personalized dashboards, domain-based questions, and detailed performance reports.
+>>>>>>> 53e3a81663e02aceae0e9822f50577114b447f59
